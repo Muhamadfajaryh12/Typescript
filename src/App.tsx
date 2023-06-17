@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { LearnProps } from './components/LearnProps';
+import { BasicProps } from './components/BasicProps';
+import { BasicPropsList } from './components/BasicPropsList';
 function App() {
+  const personName ={
+    first:'fajar',
+    last:'herjanto'
+  }
+  const personNameList =[
+    {
+      first:"fajar",
+      last:"herjanto"
+    },
+    {
+      first:"Muhamad",
+      last:"Yudhistira"
+    }
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LearnProps name={"test"} messageCount={10} isLoggedIn={true}/>
+      <BasicProps name={personName}/>
+      <BasicPropsList names={personNameList}/>
     </div>
   );
 }
