@@ -8,6 +8,10 @@ import { Heading } from './components/Heading';
 import { Oscar } from './components/Oscar';
 import { EventProps } from './components/EventProps';
 import { InputProps } from './components/InputProps';
+import { StyleProps } from './components/StyleProps';
+import { LoggedIn } from './components/state/LoggedIn';
+import { User } from './components/state/User';
+import { Counter } from './components/state/Counter';
 function App() {
   const personName ={
     first:'fajar',
@@ -36,6 +40,10 @@ function App() {
         console.log('button sudah ditekan',event,id)
       }}/>
       <InputProps value='' handleChange={(event) =>console.log(event)}/>
+      <StyleProps styles={{padding:'10px', background:'gray'}}/>
+      <LoggedIn/>
+      <User/>
+      <Counter/>
     </div>
   );
 }

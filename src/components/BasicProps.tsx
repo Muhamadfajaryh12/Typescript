@@ -1,11 +1,6 @@
-type Basic ={
-    name:{
-        first:string
-        last:string
-    }
-}
+import { PersonProps } from "./BasicProps.types"
 
-export const BasicProps = (props:Basic) =>{
+export const BasicProps = (props:PersonProps) =>{
     return(
         <div>
             <h1>{props.name.first}</h1>
